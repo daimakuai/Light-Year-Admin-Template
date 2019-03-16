@@ -2517,6 +2517,45 @@ dd, dt {
 	margin-left: 10px;
 }
 
+/* 加载动画 */
+#lyear-loading {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 9990;
+	background: rgba(0, 0, 0, 0.0325)
+}
+#lyear-loading .spinner-border {
+	z-index: 999999;
+	position: fixed;
+	left: 50%;
+	top: 50%
+}
+@-webkit-keyframes spinner-border {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-border {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.spinner-border {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  vertical-align: text-bottom;
+  border: 0.125em solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  -webkit-animation: spinner-border .75s linear infinite;
+  animation: spinner-border .75s linear infinite;
+}
+
 /** ----------------------------------
  * 响应式处理
  -------------------------------------- */
