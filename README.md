@@ -13,21 +13,27 @@
 基本页面都已完成，还有一些小bug，各位发现了可以留言告知，感谢！
 
 #### 特别感谢
-Bootstrap
-JQuery
-bootstrap-colorpicker
-bootstrap-datepicker
-bootstrap-datetimepicker
-ion-rangeslider
-jquery-confirm
-jquery-tags-input
-bootstrap-notify
-Chart.js
-chosen.jquery.js
-jquery.nicescroll.js
+- Bootstrap
+- JQuery
+- bootstrap-colorpicker
+- bootstrap-datepicker
+- bootstrap-datetimepicker
+- ion-rangeslider
+- jquery-confirm
+- jquery-tags-input
+- bootstrap-notify
+- Chart.js
+- chosen.jquery.js
+- jquery.nicescroll.js
 
 #### 登录页面
 ![光年模板登录页](https://images.gitee.com/uploads/images/2019/0316/223413_a840c9c2_82992.png "登录页面 - 光年(LightYear)后台管理系统模板.png")
 
 #### 后台首页
 ![光年模板首页](https://images.gitee.com/uploads/images/2019/0314/231617_c0900993_82992.png "首页 - 光年(LightYear)后台管理系统模板.png")
+
+#### 开关样式
+![开关样式](https://images.gitee.com/uploads/images/2019/0316/224100_4a8494eb_82992.png "开关 - 光年(LightYear)后台管理系统模板.png")
+
+#### 文档列表
+![文档列表](https://images.gitee.com/uploads/images/2019/0316/223923_60231d3e_82992.png "文档列表 - 光年(LightYear)后台管理系统模板.png")
