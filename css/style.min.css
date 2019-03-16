@@ -43,6 +43,9 @@ button:active {
 blockquote {
     font-size: 16px;
 }
+img {
+    max-width: 100%;
+}
 
 /** ----------------------------------
  * 示例中用到的样式，可删除
@@ -2017,26 +2020,41 @@ dd, dt {
 .m-b-0 {
     margin-bottom: 0px!important;
 }
+.m-5 {
+    margin: 5px!important;
+}
+.m-t-5 {
+    margin-top: 5px!important;
+}
+.m-r-5 {
+    margin-right: 5px!important;
+}
+.m-b-5 {
+    margin-bottom: 5px!important;
+}
+.m-l-5 {
+    margin-left: 5px!important;
+}
 .m-10 {
-    margin: 10px;
+    margin: 10px!important;
 }
 .m-tb-10 {
-    margin: 10px 0px;
+    margin: 10px 0px!important;
 }
 .m-lr-10 {
-    margin: 0px 10px;
+    margin: 0px 10px!important;
 }
 .m-t-10 {
-    margin-top: 10px;
+    margin-top: 10px!important;
 }
 .m-r-10 {
-    margin-right: 10px;
+    margin-right: 10px!important;
 }
 .m-b-10 {
-    margin-bottom: 10px;
+    margin-bottom: 10px!important;
 }
 .m-l-10 {
-    margin-left: 10px;
+    margin-left: 10px!important;
 }
 
 /* padding */
@@ -2050,28 +2068,34 @@ dd, dt {
     padding-bottom: 0px!important;
 }
 .p-10 {
-    padding: 10px;
+    padding: 10px!important;
 }
 .p-tb-10 {
-    padding: 10px 0px;
+    padding: 10px 0px!important;
 }
 .p-lr-10 {
-    padding: 0px 10px;
+    padding: 0px 10px!important;
 }
 .p-t-10 {
-    padding-top: 10px;
+    padding-top: 10px!important;
 }
 .p-r-10 {
-    padding-right: 10px;
+    padding-right: 10px!important;
 }
 .p-b-10 {
-    padding-bottom: 10px;
+    padding-bottom: 10px!important;
 }
 .p-l-10 {
-    padding-left: 10px;
+    padding-left: 10px!important;
 }
 .p-lr-15 {
-    padding: 0px 15px;
+    padding: 0px 15px!important;
+}
+.p-l-20 {
+    padding-left: 20px!important;
+}
+.p-l-40 {
+    padding-left: 40px!important;
 }
 
 /* 字体大小 */
@@ -2166,6 +2190,30 @@ dd, dt {
 }
 .w-100 {
 	width: 100%;
+}
+
+/* 图库 */
+.masonry-grid {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+}
+.masonry-item {
+    display: block;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+    padding-bottom: 30px;
+}
+.masonry-grid.gap-2 {
+    -webkit-column-gap: 16px;
+    -moz-column-gap: 16px;
+    column-gap: 16px;
+}
+.masonry-grid.gap-2 .masonry-item {
+    padding-bottom: 16px;
 }
 
 /** ----------------------------------
@@ -2387,6 +2435,8 @@ dd, dt {
     padding-bottom: 20px;
     font-size: 16px;
 }
+
+/* 头像相关 */
 .img-avatar {
     display: inline-block !important;
     width: 64px;
@@ -2401,6 +2451,22 @@ dd, dt {
     width: 48px;
     height: 48px;
     line-height: 48px;
+}
+.edit-avatar {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+.avatar-divider {
+    display: inline-block;
+    border-left: 1px solid rgba(77,82,89,0.07);
+    height: 50px;
+    align-self: center;
+    margin: 0px 20px;
+}
+.edit-avatar-content {
+    display: inline-block;
 }
 
 
@@ -2431,7 +2497,6 @@ dd, dt {
 	padding: 15px 24px;
 	border-bottom: 1px solid rgba(77,82,89,0.05);
 }
-
 .card-header > * {
 	margin: 0;
 	display: table-cell;
@@ -2462,6 +2527,16 @@ dd, dt {
 .card-header[class*='bg'] .h5,
 .card-header[class*='bg'] .h6 {
     color: #ffffff;
+}
+.card-toolbar {
+    padding: 24px 24px 0px 24px;
+    position: relative;
+}
+.card-toolbar .search-bar {
+    max-width: 280px;
+}
+.card-toolbar .dropdown-menu {
+    min-width: 100%;
 }
 /* card-actions */
 .card-actions {
@@ -2515,6 +2590,9 @@ dd, dt {
 }
 .card-actions > li + li {
 	margin-left: 10px;
+}
+.card .tab-content {
+    padding: 10px 24px;
 }
 
 /* 加载动画 */

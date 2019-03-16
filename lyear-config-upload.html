@@ -3,17 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-<title>日期选择器 - 光年(LightYear)后台管理系统模板</title>
+<title>上传配置 - 光年(LightYear)后台管理系统模板</title>
 <link rel="icon" href="favicon.ico" type="image/ico">
 <meta name="keywords" content="LightYear,光年,后台模板,后台管理系统,光年HTML模板">
 <meta name="description" content="LightYear是一个基于Bootstrap v3.3.7的后台管理系统的HTML模板。">
 <meta name="author" content="yinqi">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/materialdesignicons.min.css" rel="stylesheet">
-<!--时间选择插件-->
-<link rel="stylesheet" href="js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
-<!--日期选择插件-->
-<link rel="stylesheet" href="js/bootstrap-datepicker/bootstrap-datepicker3.min.css">
+<!--标签插件-->
+<link rel="stylesheet" href="js/jquery-tags-input/jquery.tagsinput.min.css">
 <link href="css/style.min.css" rel="stylesheet">
 </head>
   
@@ -59,21 +57,21 @@
                 <li> <a href="lyear_forms_switch.html">开关</a> </li>
               </ul>
             </li>
-            <li class="nav-item nav-item-has-subnav">
+            <li class="nav-item nav-item-has-subnav active open">
               <a href="javascript:void(0)"><i class="mdi mdi-file-outline"></i> 示例页面</a>
               <ul class="nav nav-subnav">
                 <li> <a href="lyear_pages_doc.html">文档列表</a> </li>
                 <li> <a href="lyear_pages_gallery.html">图库列表</a> </li>
-                <li> <a href="lyear_pages_config.html">网站配置</a> </li>
+                <li class="active"> <a href="lyear_pages_config.html">网站配置</a> </li>
                 <li> <a href="lyear_pages_rabc.html">设置权限</a> </li>
                 <li> <a href="lyear_pages_add_doc.html">新增文档</a> </li>
                 <li> <a href="lyear_pages_login.html">登录页面</a> </li>
               </ul>
             </li>
-            <li class="nav-item nav-item-has-subnav active open">
+            <li class="nav-item nav-item-has-subnav">
               <a href="javascript:void(0)"><i class="mdi mdi-language-javascript"></i> JS 插件</a>
               <ul class="nav nav-subnav">
-                <li class="active"> <a href="lyear_js_datepicker.html">日期选取器</a> </li>
+                <li> <a href="lyear_js_datepicker.html">日期选取器</a> </li>
                 <li> <a href="lyear_js_sliders.html">滑块</a> </li>
                 <li> <a href="lyear_js_colorpicker.html">选色器</a> </li>
                 <li> <a href="lyear_js_chartjs.html">Chart.js</a> </li>
@@ -106,7 +104,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <span class="navbar-page-title"> UI元素 - 日期选择器 </span>
+            <span class="navbar-page-title"> UI元素 - 网站配置 </span>
           </div>
           
           <ul class="topbar-right">
@@ -139,33 +137,45 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="card">
-              <div class="card-header"><h4>时间选择</h4></div>
-              <div class="card-body">
-                
-                <input class="form-control js-datetimepicker" type="text" id="example-datetimepicker" name="add_time" placeholder="请选择具体时间" value="" data-side-by-side="true" data-locale="zh-cn" data-format="YYYY-MM-DD HH:mm" />
-                
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-12">
-            <div class="card">
-              <div class="card-header"><h4>日期选择</h4></div>
-              <div class="card-body">
-                
-                <input class="form-control js-datepicker m-b-10" type="text" id="example-datepicker" name="example-datepicker" placeholder="yyyy-mm-dd" value="" data-date-format="yyyy-mm-dd" />
-                
-                <input class="form-control js-datepicker m-b-10" type="text" id="example-datepicker1" name="example-datepicker1" data-date-format="yyyy/mm/dd" placeholder="yyyy/mm/dd">
-                
-                <input class="form-control js-datepicker m-b-10" type="text" id="example-datepicker2" name="example-datepicker2" data-date-format="yy/mm/dd" placeholder="yy/mm/dd">
-                
-                <div class="input-daterange input-group">
-                  <input class="form-control js-datepicker" data-date-format="yyyy-mm-dd" type="text" id="example-daterange1" name="example-daterange1" placeholder="从">
-                  <span class="input-group-addon"><i class="mdi mdi-chevron-right"></i></span>
-                  <input class="form-control js-datepicker" data-date-format="yyyy-mm-dd" type="text" id="example-daterange2" name="example-daterange2" placeholder="至">
+              <ul class="nav nav-tabs">
+                <li> <a href="lyear-config-config.html">基本</a> </li>
+                <li> <a href="lyear-config-system.html">系统</a> </li>
+                <li class="active"> <a href="#!">上传</a> </li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active">
+                  
+                  <form action="#!" method="post" name="edit-form" class="edit-form">
+                    <div class="form-group">
+                      <label for="upload_file_ext">图片上传大小限制</label>
+                      <input class="js-tags-input form-control" type="text" id="upload_file_ext" name="upload_file_ext" value="doc,docx,xls,xlsx,ppt,pptx,pdf,wps,txt,rar,zip,gz,bz2,7z" >
+                      <small class="help-block">多个后缀用逗号隔开，不填写则不限制类型</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="upload_image_size">图片上传大小限制</label>
+                      <input class="form-control" type="text" id="upload_image_size" name="upload_image_size" value="0" placeholder="请输入图片上传大小限制" >
+                      <small class="help-block">0为不限制大小，单位：kb</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="upload_image_ext">允许上传的图片后缀</label>
+                      <input class="js-tags-input form-control" type="text" id="upload_image_ext" name="upload_image_ext" value="gif,jpg,jpeg,bmp,png" >
+                      <small class="help-block">多个后缀用逗号隔开，不填写则不限制类型</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="upload_file_size">文件上传大小限制</label>
+                      <input class="form-control" type="text" id="upload_file_size" name="upload_file_size" value="0" placeholder="请输入文件上传大小限制" >
+                      <small class="help-block">0为不限制大小，单位：kb</small>
+                    </div>
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-primary m-r-5">确 定</button>
+                      <button type="button" class="btn btn-default" onclick="javascript:history.back(-1);return false;">返 回</button>
+                    </div>
+                  </form>
+
+                  
                 </div>
-                
               </div>
+
             </div>
           </div>
           
@@ -181,13 +191,8 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/jquery.nicescroll.js"></script>
-<!--时间选择插件-->
-<script src="js/bootstrap-datetimepicker/moment.min.js"></script>
-<script src="js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
-<script src="js/bootstrap-datetimepicker/locale/zh-cn.js"></script>
-<!--日期选择插件-->
-<script src="js/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-<script src="js/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+<!--标签插件-->
+<script src="js/jquery-tags-input/jquery.tagsinput.min.js"></script>
 <script type="text/javascript" src="js/main.min.js"></script>
 </body>
 </html>
