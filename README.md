@@ -27,7 +27,7 @@
 - bootstrap-notify
 - Chart.js
 - chosen.jquery.js
-- jquery.nicescroll.js
+- perfect-scrollbar
 
 #### 登录页面
 ![光年模板登录页](https://images.gitee.com/uploads/images/2019/0316/223413_a840c9c2_82992.png "登录页面 - 光年(LightYear)后台管理系统模板.png")
