@@ -2375,8 +2375,8 @@ dd, dt {
   opacity: 0;
   transition: background-color .2s linear, opacity .2s linear;
   -webkit-transition: background-color .2s linear, opacity .2s linear;
-  height: 12px;
-  bottom: 0px;
+  height: 6px;
+  bottom: 2px;
   position: absolute;
 }
 
@@ -2385,8 +2385,8 @@ dd, dt {
   opacity: 0;
   transition: background-color .2s linear, opacity .2s linear;
   -webkit-transition: background-color .2s linear, opacity .2s linear;
-  width: 12px;
-  right: 0;
+  width: 6px;
+  right: 2px;
   position: absolute;
 }
 .ps--active-x > .ps__rail-x,
@@ -2416,8 +2416,8 @@ dd, dt {
   border-radius: 6px;
   transition: background-color .2s linear, height .2s ease-in-out;
   -webkit-transition: background-color .2s linear, height .2s ease-in-out;
-  height: 6px;
-  bottom: 2px;
+  height: 3px;
+  bottom: 0px;
   position: absolute;
 }
 .ps__thumb-y {
@@ -2425,21 +2425,21 @@ dd, dt {
   border-radius: 6px;
   transition: background-color .2s linear, width .2s ease-in-out;
   -webkit-transition: background-color .2s linear, width .2s ease-in-out;
-  width: 6px;
-  right: 2px;
+  width: 3px;
+  right: 0px;
   position: absolute;
 }
 .ps__rail-x:hover > .ps__thumb-x,
 .ps__rail-x:focus > .ps__thumb-x,
 .ps__rail-x.ps--clicking .ps__thumb-x {
   background-color: #999;
-  height: 8px;
+  height: 6px;
 }
 .ps__rail-y:hover > .ps__thumb-y,
 .ps__rail-y:focus > .ps__thumb-y,
 .ps__rail-y.ps--clicking .ps__thumb-y {
   background-color: #999;
-  width: 8px;
+  width: 6px;
 }
 @supports (-ms-overflow-style: none) {
   .ps {
@@ -2485,7 +2485,9 @@ dd, dt {
     visibility: visible;
 }
 .lyear-layout-sidebar-scroll {
-    height: 100%;
+	height: -moz-calc(100% - 68px);
+	height: -webkit-calc(100% - 68px);
+	height: calc(100% - 68px);
     position: relative;
 }
 
@@ -2494,6 +2496,8 @@ dd, dt {
     position: relative;
     overflow: hidden;
     width: 100%;
+	-webkit-box-shadow: 0 1px 1px -1px rgba(77,82,89,0.15);
+    box-shadow: 0 1px 1px -1px rgba(77,82,89,0.15);
 }
 .sidebar-header:before, .sidebar-header:after {
     content: " ";
@@ -2509,9 +2513,7 @@ dd, dt {
     max-width: 240px;
     margin: 16px 0px;
 }
-
 .sidebar-main {
-    border-top: 1px solid rgba(77,82,89,0.05);
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
 }
