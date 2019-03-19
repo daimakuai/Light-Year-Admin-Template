@@ -2905,3 +2905,8 @@ dd, dt {
         border-radius: 0;
     }
 }
+@media screen and (max-width: 420px) {
+    .navbar-page-title {
+        display: none;
+    }
+}
