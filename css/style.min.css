@@ -2553,9 +2553,9 @@ dd, dt {
 .nav-item-has-subnav > a:after {
     position: absolute;
     right: 24px;
-    top: 15px;
     font-family: 'Material Design Icons';
     font-size: 10px;
+    line-height: 1.75;
     content: '\f142';
     -webkit-transition: -webkit-transform 0.3s linear;
     transition: -webkit-transform 0.3s linear;
@@ -2903,6 +2903,18 @@ dd, dt {
     }
     .navbar {
         border-radius: 0;
+    }
+}
+@media screen and (max-width: 767px) {
+    .table-responsive {
+        border-color: #eceeef;
+    }
+}
+@media screen and (max-width: 700px) {
+    .card-toolbar .search-bar {
+        max-width: 100%;
+        margin-bottom: 10px;
+        float: none!important;
     }
 }
 @media screen and (max-width: 420px) {
