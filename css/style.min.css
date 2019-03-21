@@ -83,7 +83,15 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #4d5259;
 }
-.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+.nav > li > a:focus {
+    background-color: transparent;
+}
+.nav > li > a:hover {
+    background-color: rgba(0,0,0,.0085);
+}
+.nav .open > a,
+.nav .open > a:focus,
+.nav .open > a:hover {
     background-color: transparent;
     border-color: transparent;
 }
@@ -2529,26 +2537,31 @@ dd, dt {
     padding-bottom: 13px;
 }
 .nav-drawer > .active > a {
-    background-color: transparent;
+    background-color: rgba(0,0,0,.0125);
     border-color: #33cabb;
 }
-.nav > li > a:hover {
-    text-decoration: none;
-    background-color: #f9fafb;
-}
-.nav > li > a:focus {
-    background-color: transparent;
+.nav-drawer > li.active > a {
+    background-color: rgba(0,0,0,.0125)!important;
 }
 .nav-drawer > .active > a:hover,
 .nav-drawer > .active > a:focus,
 .nav-drawer > .active > a:active {
+    background-color: rgba(0,0,0,.0125);
     border-color: #33cabb;
+}
+.nav-drawer .nav-subnav > li.active > a,
+.nav-drawer .nav-subnav > li > a:hover {
+    color: #33cabb;
+    background-color: transparent;
 }
 .nav-drawer > li > a > i {
     position: absolute;
     left: 21px;
     top: 11px;
     font-size: 1.25em;
+}
+.nav-drawer ul li ul {
+    padding-left: 15px;
 }
 .nav-item-has-subnav > a:after {
     position: absolute;
@@ -2568,10 +2581,6 @@ dd, dt {
 }
 .nav-item-has-subnav.open > .nav-subnav {
     display: block;
-}
-.nav-subnav > .active > a {
-    color: #33cabb;
-    background-color: #f9fafb;
 }
 .nav-subnav {
     display: none;
