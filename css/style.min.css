@@ -2472,31 +2472,56 @@ dd, dt {
     width: 240px;
     font-weight: 500;
     background-color: #fff;
-    -webkit-transform: translateX(-240px);
-    transform: translateX(-240px);
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
-    transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
-    -webkit-transition-property: visibility, -webkit-transform;
-    transition-property: visibility, -webkit-transform;
-    transition-property: transform, visibility;
-    transition-property: transform, visibility, -webkit-transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 0.3s transform;
+    transition: 0.3s transform;
+    transform: translateX(0);
     -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.08);
+	-moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.08);
     box-shadow: 0px 0px 5px rgba(0,0,0,0.08);
 }
-.lyear-layout-sidebar.lyear-layout-sidebar-open {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+.lyear-layout-sidebar-close .lyear-layout-sidebar {
+    transform: translateX(-100%);
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+    box-shadow: none;
 }
-.lyear-layout-sidebar.lyear-layout-sidebar-visible {
-    visibility: visible;
+.lyear-layout-sidebar-close .lyear-layout-header,
+.lyear-layout-sidebar-close .lyear-layout-content {
+    padding-left: 0px;
 }
 .lyear-layout-sidebar-scroll {
 	height: -moz-calc(100% - 68px);
 	height: -webkit-calc(100% - 68px);
 	height: calc(100% - 68px);
     position: relative;
+}
+
+/* 侧边栏开关 */
+.lyear-aside-toggler {
+    margin-right: .25rem;
+    padding: .25rem .95rem .25rem .25rem;
+    line-height: 1.5;
+    cursor: pointer;
+}
+.lyear-aside-toggler .lyear-toggler-bar {
+    display: block;
+    height: 2px;
+    width: 20px;
+	background-color: #4d5259;
+    margin: 4px 0px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+.lyear-aside-toggler .lyear-toggler-bar:nth-child(2) {
+    width: 15px;
+}
+.lyear-aside-toggler:hover .lyear-toggler-bar:nth-child(2) {
+    width: 20px;
+}
+.lyear-layout-sidebar-close .lyear-aside-toggler .lyear-toggler-bar {
+    width: 20px;
 }
 
 /* logo */
@@ -2603,24 +2628,6 @@ dd, dt {
     line-height: 24px;
 }
 
-/* 遮罩层 */
-.lyear-mask-modal {
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 100%;
-    left: 0;
-    opacity: 1;
-    top: 0;
-    visibility: visible;
-    width: 100%;
-    z-index: 5;
-    position: fixed;
-    -webkit-transition: visibility 0 linear 0.4s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    transition: visibility 0 linear 0.4s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-}
-
-
 /** ----------------------------------
  * 头部信息
  -------------------------------------- */
@@ -2630,8 +2637,12 @@ dd, dt {
     right: 0;
     left: 0;
     z-index: 4;
+    padding-left: 240px;
     background-color: #fff;
+    -webkit-transition: padding 0.3s;
+    transition: padding 0.3s;
     -webkit-box-shadow: 4px 0 5px rgba(0, 0, 0, 0.035);
+    -moz-box-shadow: 4px 0 5px rgba(0, 0, 0, 0.035);
     box-shadow: 4px 0 5px rgba(0, 0, 0, 0.035);
 }
 .lyear-layout-header .navbar {
@@ -2639,6 +2650,9 @@ dd, dt {
     min-height: 64px;
     margin-bottom: 0;
     border: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
 }
 .lyear-layout-header .navbar-default {
     background-color: transparent;
@@ -2725,6 +2739,9 @@ dd, dt {
 	height: 100%;
 	width: 100%;
     padding-top: 68px;
+    padding-left: 240px;
+    -webkit-transition: padding 0.3s;
+    transition: padding 0.3s;
 }
 .lyear-layout-content .container-fluid {
     padding-top: 15px;
@@ -2885,33 +2902,37 @@ dd, dt {
 /** ----------------------------------
  * 响应式处理
  -------------------------------------- */
-@media screen and (max-width: 768px)
-{
+@media (max-width: 1024px) {
     .lyear-layout-sidebar {
-        -webkit-overflow-scrolling: touch;
-        overflow-x: hidden;
-        overflow-y: auto;
+        transform: translateX(-100%);
     }
-    .lyear-layout-sidebar:not(.lyear-layout-sidebar-open) {
+	.lyear-layout-header,
+    .lyear-layout-content {
+        padding-left: 0;
+    }
+	.lyear-layout-sidebar {
         -webkit-box-shadow: none;
+		-moz-webkit-box-shadow: none;
         box-shadow: none;
     }
-}
-@media screen and (min-width: 769px)
-{
-    .lyear-layout-sidebar {
-        visibility: visible;
-        -webkit-transform: translateX(0);
+	.lyear-layout-sidebar.lyear-aside-open {
         transform: translateX(0);
-        -webkit-transition: none;
-        transition: none;
     }
-    .lyear-layout-header,
-    .lyear-layout-content {
-        padding-left: 240px;
-    }
-    .navbar {
-        border-radius: 0;
+    /* 遮罩层 */
+    .lyear-mask-modal {
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100%;
+        left: 0;
+        opacity: 1;
+        top: 0;
+        visibility: visible;
+        width: 100%;
+        z-index: 5;
+        position: fixed;
+        -webkit-transition: visibility 0 linear 0.4s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: visibility 0 linear 0.4s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
     }
 }
 @media screen and (max-width: 767px) {
