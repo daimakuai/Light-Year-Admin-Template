@@ -568,8 +568,9 @@ input[type=radio] {
 }
 .lyear-checkbox input,
 .lyear-radio input {
-    position: absolute;
-    opacity: 0;
+    position: absolute;;
+    /*opacity: 0;*/
+    display: none;
 }
 .lyear-checkbox span::before,
 .lyear-radio span::before {
@@ -618,6 +619,16 @@ input[type=radio] {
 .lyear-radio.radio-grey span::before {
     background-color: #ebebeb;
     border-color: #ebebeb;
+}
+.lyear-checkbox input:disabled + span,
+.lyear-radio input:disabled + span {
+    cursor: not-allowed;
+}
+.lyear-checkbox input:disabled + span::before,
+.lyear-checkbox input:disabled + span::after,
+.lyear-radio input:disabled + span::before,
+.lyear-radio input:disabled + span::after {
+    opacity: .4;
 }
 /* checkbox */
 .checkbox-primary input:checked~span::before {
