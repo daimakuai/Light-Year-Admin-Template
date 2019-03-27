@@ -1055,6 +1055,7 @@ input[type=radio] {
 .nav-tabs > li.active > a:hover {
     color: #4d5259;
     border: none;
+    background-color: transparent;
     border-bottom: 1px solid #33cabb;
 }
 .nav-tabs.nav > li > a:hover,
@@ -2482,7 +2483,6 @@ dd, dt {
     display: block;
     width: 240px;
     font-weight: 500;
-    background-color: #fff;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-transition: 0.3s transform;
@@ -2507,6 +2507,7 @@ dd, dt {
 	height: -webkit-calc(100% - 68px);
 	height: calc(100% - 68px);
     position: relative;
+    background-color: #fff;
 }
 
 /* 侧边栏开关 */
@@ -2539,6 +2540,8 @@ dd, dt {
 .sidebar-header {
     position: relative;
     overflow: hidden;
+    z-index: 999;
+    background-color: #fff;
     width: 100%;
 	-webkit-box-shadow: 0 1px 1px -1px rgba(77,82,89,0.15);
     box-shadow: 0 1px 1px -1px rgba(77,82,89,0.15);
