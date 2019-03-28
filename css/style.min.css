@@ -99,9 +99,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 /* 下拉 */
 .dropdown-menu {
     border-radius: 0;
-    border: 1px solid rgba(235, 235, 235, 0.4);
-    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.035);
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.035);
+    border: none;
+    /*border: 1px solid rgba(235, 235, 235, 0.4);*/
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.075);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.075);
 }
 .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
     background-color: #f9fafb;
@@ -165,12 +166,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 /* 标签 */
 .label {
+    padding-top: .3em;
     border-radius: 2px;
     font-weight: 300;
 }
 .label-default {
-    background-color: #fcfdfe;
-    border: 1px solid #ebebeb;
+    background-color: #f5f6f7;
     color: #8b95a5;
 }
 .label-primary {
@@ -2965,4 +2966,165 @@ dd, dt {
     .navbar-page-title {
         display: none;
     }
+}
+
+/** ----------------------------------
+ * 切换主题配色
+ -------------------------------------- */
+.icon-palette {
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 0 12px;
+	text-align: center;
+}
+.drop-title {
+    color: #4d5259;
+}
+.drop-title p {
+    padding: 5px 15px 0px 15px;
+}
+.drop-skin-li {
+    padding: 0px 12px;
+}
+.drop-skin-li input[type=radio] {
+    display: none;
+}
+.drop-skin-li input[type=radio]+label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin: 3px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-transition: all .1s ease;
+    transition: all .1s ease;
+}
+.drop-skin-li input[type=radio]:checked+label {
+    position: relative;
+}
+.drop-skin-li input[type=radio]:checked+label::after {
+    content: "\f12c";
+    font-family: "Material Design Icons";
+    font-size: 1rem;
+    display: block;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+	line-height: 20px;
+    position: absolute;
+    top: 0px;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+.drop-skin-li .inverse input[type=radio]:checked+label::after {
+    color: #4d5259;
+}
+.dropdown-skin .dropdown-menu {
+    width: 262px;
+}
+
+#header_bg_1+label, #logo_bg_1+label, #sidebar_bg_1+label {
+    background-color: #fff;
+	border: 1px solid #f0f0f0;
+}
+#header_bg_2+label, #logo_bg_2+label, #sidebar_bg_2+label {
+    background-color: #15c377;
+	border: 1px solid #15c377;
+}
+#header_bg_3+label, #logo_bg_3+label, #sidebar_bg_3+label {
+    background-color: #48b0f7;
+	border: 1px solid #48b0f7;
+}
+#header_bg_4+label, #logo_bg_4+label, #sidebar_bg_4+label {
+    background-color: #faa64b;
+	border: 1px solid #faa64b;
+}
+#header_bg_5+label, #logo_bg_5+label, #sidebar_bg_5+label {
+    background-color: #f96868;
+	border: 1px solid #f96868;
+}
+#header_bg_6+label, #logo_bg_6+label, #sidebar_bg_6+label {
+    background-color: #926dde;
+	border: 1px solid #926dde;
+}
+#header_bg_7+label, #logo_bg_7+label, #sidebar_bg_7+label {
+    background-color: #33cabb;
+	border: 1px solid #33cabb;
+}
+#header_bg_8+label, #logo_bg_8+label, #sidebar_bg_8+label {
+    background-color: #465161;
+	border: 1px solid #465161;
+}
+
+[data-headerbg=color_2] .lyear-layout-header,
+[data-logobg=color_2] .sidebar-header,
+[data-sidebarbg=color_2] .lyear-layout-sidebar-scroll {
+    background-color: #15c377;
+}
+[data-headerbg=color_3] .lyear-layout-header,
+[data-logobg=color_3] .sidebar-header,
+[data-sidebarbg=color_3] .lyear-layout-sidebar-scroll {
+    background-color: #48b0f7;
+}
+[data-headerbg=color_4] .lyear-layout-header,
+[data-logobg=color_4] .sidebar-header,
+[data-sidebarbg=color_4] .lyear-layout-sidebar-scroll {
+    background-color: #faa64b;
+}
+[data-headerbg=color_5] .lyear-layout-header,
+[data-logobg=color_5] .sidebar-header,
+[data-sidebarbg=color_5] .lyear-layout-sidebar-scroll {
+    background-color: #f96868;
+}
+[data-headerbg=color_6] .lyear-layout-header,
+[data-logobg=color_6] .sidebar-header,
+[data-sidebarbg=color_6] .lyear-layout-sidebar-scroll {
+    background-color: #926dde;
+}
+[data-headerbg=color_7] .lyear-layout-header,
+[data-logobg=color_7] .sidebar-header,
+[data-sidebarbg=color_7] .lyear-layout-sidebar-scroll {
+    background-color: #33cabb;
+}
+[data-headerbg=color_8] .lyear-layout-header,
+[data-logobg=color_8] .sidebar-header,
+[data-sidebarbg=color_8] .lyear-layout-sidebar-scroll {
+    background-color: #465161;
+}
+
+[data-logobg*=color_] .sidebar-header img {
+    position: relative;
+	left: -220px;
+    -webkit-filter: drop-shadow(rgb(255, 255, 255) 220px 0px);
+	-moz-filter: drop-shadow(rgb(255, 255, 255) 220px 0px);
+    -ms-filter: drop-shadow(rgb(255, 255, 255) 220px 0px);
+    -o-filter: drop-shadow(rgb(255, 255, 255) 220px 0px);
+    filter: drop-shadow(rgb(255, 255, 255) 220px 0px);
+}
+[data-headerbg*=color_] .lyear-layout-header,
+[data-headerbg*=color_] .lyear-layout-header .topbar-right > li > a,
+[data-sidebarbg*=color_] .lyear-layout-sidebar-scroll a,
+[data-sidebarbg*=color_] .sidebar-footer {
+    color: rgba(255, 255, 255, .85);
+}
+[data-sidebarbg*=color_] .nav-drawer .nav-subnav > li.active > a,
+[data-sidebarbg*=color_] .nav-drawer .nav-subnav > li > a:hover {
+    color: #fff;
+}
+[data-headerbg*=color_] .lyear-aside-toggler .lyear-toggler-bar {
+    background-color: #fff;
+}
+[data-sidebarbg*=color_] .nav-drawer > .active > a {
+    border-color: rgba(255, 255, 255, .35);
+	background-color: rgba(255, 255, 255, .075);
+}
+[data-sidebarbg*=color_] .nav > li > a:hover {
+    background-color: rgba(255, 255, 255, .035);
+}
+[data-sidebarbg*=color_] .nav-drawer > .active > a:hover,
+[data-sidebarbg*=color_] .nav-drawer > .active > a:focus,
+[data-sidebarbg*=color_] .nav-drawer > .active > a:active {
+    border-color: rgba(255, 255, 255, .35);
 }
