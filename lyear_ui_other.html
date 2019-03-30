@@ -335,6 +335,52 @@
                   <a href="#!" class="list-group-item">峻岭飞骑 书生施妙手 神弹却敌 天女护金瓶</a>
                   <a href="#!" class="list-group-item">琴韵寄深心 尘缘未了 边城窥隐秘 旧地重来</a>
                 </div>
+                <p>列表组中的元素也可以直接就是按钮（也同时意味着父元素必须是 <code>&lt;div&gt;</code> 而不能用 <code>&lt;ul&gt;</code> 了），并且无需为每个按钮单独包裹一个父元素。<strong class="text-danger">注意不要使用标准的 <code>.btn</code> 类！</strong></p>
+                <div class="list-group">
+                  <button type="button" class="list-group-item">Cras justo odio</button>
+                  <button type="button" class="list-group-item">Dapibus ac facilisis in</button>
+                  <button type="button" class="list-group-item">Morbi leo risus</button>
+                  <button type="button" class="list-group-item">Porta ac consectetur ac</button>
+                  <button type="button" class="list-group-item">Vestibulum at eros</button>
+                </div>
+                <p>为 <code>.list-group-item</code> 添加 <code>.disabled</code> 类可以让单个条目显示为灰色，表现出被禁用的效果。</p>
+                <div class="list-group">
+                  <a href="#!" class="list-group-item disabled">
+                    Cras justo odio
+                  </a>
+                  <a href="#!" class="list-group-item">Dapibus ac facilisis in</a>
+                  <a href="#!" class="list-group-item">Morbi leo risus</a>
+                  <a href="#!" class="list-group-item">Porta ac consectetur ac</a>
+                  <a href="#!" class="list-group-item">Vestibulum at eros</a>
+                </div>
+                <p>为列表中的条目添加情境类，默认样式或链接列表都可以。还可以为列表中的条目设置 <code>.active</code> 状态。</p>
+                <ul class="list-group">
+                  <li class="list-group-item list-group-item-success">Dapibus ac facilisis in</li>
+                  <li class="list-group-item list-group-item-info">Cras sit amet nibh libero</li>
+                  <li class="list-group-item list-group-item-warning">Porta ac consectetur ac</li>
+                  <li class="list-group-item list-group-item-danger">Vestibulum at eros</li>
+                </ul>
+                <div class="list-group">
+                  <a href="#!" class="list-group-item list-group-item-success">Dapibus ac facilisis in</a>
+                  <a href="#!" class="list-group-item list-group-item-info">Cras sit amet nibh libero</a>
+                  <a href="#!" class="list-group-item list-group-item-warning">Porta ac consectetur ac</a>
+                  <a href="#!" class="list-group-item list-group-item-danger">Vestibulum at eros</a>
+                </div>
+                <p>列表组中的每个元素都可以是任何 HTML 内容，甚至是像下面的带链接的列表组。</p>
+                <div class="list-group">
+                  <a href="#!" class="list-group-item active">
+                    <h4 class="list-group-item-heading">List group item heading</h4>
+                    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                  </a>
+                  <a href="#!" class="list-group-item">
+                    <h4 class="list-group-item-heading">List group item heading</h4>
+                    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                  </a>
+                  <a href="#!" class="list-group-item">
+                    <h4 class="list-group-item-heading">List group item heading</h4>
+                    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                  </a>
+                </div>
                 
               </div>
             </div>
