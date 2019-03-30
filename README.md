@@ -13,7 +13,7 @@
 简洁而清新的后台模板，功能虽少，倒也满足简单的后台功能，也能够快速上手，希望大家支持。
 
 #### 特别感谢
-- Bootstrap
+- Bootstrap(去掉了自带的字体图标)
 - JQuery
 - bootstrap-colorpicker
 - bootstrap-datepicker
@@ -27,6 +27,8 @@
 - perfect-scrollbar
 
 ### 更新记录
+2019.03.30 修正bootstrap-datetimepicker图标bug，调整一些样式
+
 2019.03.28 新增主题配色切换
 - 颜色切换，主要针对logo，顶部，侧边栏
 - 目前只在首页页面增加切换，并且未将设置存储到cookie
