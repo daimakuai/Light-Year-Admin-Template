@@ -2932,6 +2932,9 @@ dd, dt {
     .navbar-page-title {
         display: none;
     }
+    .dropdown-skin .dropdown-menu {
+        width: auto!important; 
+    }
 }
 
 /** ----------------------------------
@@ -3293,16 +3296,20 @@ body[data-theme='dark'] a,
     background-color: #292B3D;
     color: #bebdc2;
 }
-[data-theme='dark'] .list-group-item-success {
+[data-theme='dark'] .list-group-item-success,
+[data-theme='translucent'] .list-group-item-success {
     color: #155724!important;
 }
-[data-theme='dark'] .list-group-item-info {
+[data-theme='dark'] .list-group-item-info,
+[data-theme='translucent'] .list-group-item-info {
     color: #0c5460!important;
 }
-[data-theme='dark'] .list-group-item-warning {
+[data-theme='dark'] .list-group-item-warning,
+[data-theme='translucent'] .list-group-item-warning {
     color: #856404!important;
 }
-[data-theme='dark'] .list-group-item-danger {
+[data-theme='dark'] .list-group-item-danger,
+[data-theme='translucent'] .list-group-item-danger {
     color: #721c24!important;
 }
 [data-theme='dark'] a.list-group-item .list-group-item-heading,
