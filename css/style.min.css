@@ -2933,7 +2933,7 @@ dd, dt {
         display: none;
     }
     .dropdown-skin .dropdown-menu {
-        width: auto!important; 
+        width: -131px!important; 
     }
 }
 
