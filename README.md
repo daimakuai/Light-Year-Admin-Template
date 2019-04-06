@@ -24,6 +24,33 @@
 
 主题切换并没有存到cookie中，大家根据自己实际情况，做cookie存储或者其他方式。
 
+#### jquery-cookie保存设置示例
+```
+        // 读取cookie中的主题设置
+	var the_logo_bg    = $.cookie('the_logo_bg'),
+	    the_header_bg  = $.cookie('the_header_bg'),
+	    the_sidebar_bg = $.cookie('the_sidebar_bg'),
+	    the_site_theme = $.cookie('the_site_theme');
+	console.log(the_logo_bg);
+	if (the_logo_bg) $('body').attr('data-logobg', the_logo_bg);
+	if (the_header_bg) $('body').attr('data-headerbg', the_header_bg);
+	if (the_sidebar_bg) $('body').attr('data-sidebarbg', the_sidebar_bg);
+	if (the_site_theme) $('body').attr('data-theme', the_site_theme);
+	
+	// 设置主题配色
+	setTheme = function(input_name, data_name) {
+	    $("input[name='"+input_name+"']").click(function(){
+	        $('body').attr(data_name, $(this).val());
+		$.cookie('the_'+input_name, $(this).val());
+	    });
+	}
+	setTheme('site_theme', 'data-theme');
+	setTheme('logo_bg', 'data-logobg');
+	setTheme('header_bg', 'data-headerbg');
+	setTheme('sidebar_bg', 'data-sidebarbg');
+```
+
+
 #### 特别感谢
 - Bootstrap(去掉了自带的字体图标)
 - JQuery
