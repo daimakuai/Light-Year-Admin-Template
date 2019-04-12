@@ -3,6 +3,9 @@
 #### 演示网址
 [http://lyear.itshubao.com](http://lyear.itshubao.com)
 
+#### 交流群
+703726776
+
 #### 介绍
 ![light year admin](https://images.gitee.com/uploads/images/2019/0314/224956_3eb2a29a_82992.png "未命名-1.png")
 
