@@ -24,7 +24,7 @@ var lightyear = function(){
      * 页面小提示
      * @param $msg 提示信息
      * @param $type 提示类型:'info', 'success', 'warning', 'danger'
-     * @param $time 停留时间，例如：1000
+     * @param $time 毫秒数，例如：1000
      * @param $icon 图标，例如：'fa fa-user' 或 'glyphicon glyphicon-warning-sign'
      * @param $from 'top' 或 'bottom'
      * @param $align 'left', 'right', 'center'

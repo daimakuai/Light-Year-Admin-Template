@@ -46,6 +46,14 @@ blockquote {
 img {
     max-width: 100%;
 }
+pre {
+    background-color: #f9fafb;
+    border: none;
+    border-left: 5px solid #ebebeb;
+    padding: 12px;
+    border-radius: 3px;
+    color: #616a78;
+}
 
 /** ----------------------------------
  * 示例中用到的样式，可删除

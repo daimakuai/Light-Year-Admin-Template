@@ -67,6 +67,7 @@
                 <li> <a href="lyear_pages_add_doc.html">新增文档</a> </li>
                 <li> <a href="lyear_pages_guide.html">表单向导</a> </li>
                 <li> <a href="lyear_pages_login.html">登录页面</a> </li>
+                <li> <a href="lyear_pages_error.html">错误页面</a> </li>
               </ul>
             </li>
             <li class="nav-item nav-item-has-subnav active open">
@@ -269,7 +270,44 @@
                 
                 <button type="button" class="btn btn-primary" id="example-success-notify">确认修改</button>
                 <button type="button" class="btn btn-dark" id="example-error-notify">修改失败</button>
-       
+                
+                <p class="m-t-10">页面加载等待效果</p>
+                <pre><code>lightyear.loading('show');  // 显示
+lightyear.loading('hide');  // 隐藏</code></pre>
+                
+                <p class="m-t-10">消息提示</p>
+                <p>消息提示采用的是bootstrap-notify插件，这里包装了一下(包装方法来自DolphinPHP)，您也可以直接使用bootstrap-notify。</p>
+                <table class="table table-bordered">
+                  <tr>
+                    <th>参数</th>
+                    <th>说明</th>
+                  </tr>
+                  <tr>
+                    <td>$msg</td>
+                    <td>提示信息</td>
+                  </tr>
+                  <tr>
+                    <td>$type</td>
+                    <td>提示类型：'info', 'success', 'warning', 'danger'</td>
+                  </tr>
+                  <tr>
+                    <td>$time</td>
+                    <td>毫秒数</td>
+                  </tr>
+                  <tr>
+                    <td>$icon</td>
+                    <td>图标，例如：'mdi-emoticon-happy'，具体参考<a href="lyear_ui_icons.html">图标</a> </td>
+                  </tr>
+                  <tr>
+                    <td>$from</td>
+                    <td>'top' 或 'bottom'</td>
+                  </tr>
+                  <tr>
+                    <td>$align</td>
+                    <td>'left', 'right', 'center'</td>
+                  </tr>
+                </table>
+                <pre><code>lightyear.notify('修改成功，页面即将自动跳转~', 'success', 5000, 'mdi mdi-emoticon-happy', 'top', 'center');</code></pre>
               </div>
             </div>
           </div>
