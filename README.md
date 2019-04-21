@@ -3,6 +3,9 @@
 #### 演示网址
 [http://lyear.itshubao.com](http://lyear.itshubao.com)
 
+#### 交流群
+703726776
+
 #### 介绍
 ![light year admin](https://images.gitee.com/uploads/images/2019/0314/224956_3eb2a29a_82992.png "未命名-1.png")
 
@@ -23,6 +26,34 @@
 - css中删除 line 2937 - line 3946
 
 主题切换并没有存到cookie中，大家根据自己实际情况，做cookie存储或者其他方式。
+
+#### jquery-cookie保存设置示例
+```
+	// 读取cookie中的主题设置
+	var the_logo_bg    = $.cookie('the_logo_bg'),
+	    the_header_bg  = $.cookie('the_header_bg'),
+	    the_sidebar_bg = $.cookie('the_sidebar_bg'),
+	    the_site_theme = $.cookie('the_site_theme');
+	console.log(the_logo_bg);
+	if (the_logo_bg) $('body').attr('data-logobg', the_logo_bg);
+	if (the_header_bg) $('body').attr('data-headerbg', the_header_bg);
+	if (the_sidebar_bg) $('body').attr('data-sidebarbg', the_sidebar_bg);
+	if (the_site_theme) $('body').attr('data-theme', the_site_theme);
+	
+	// 设置主题配色
+	setTheme = function(input_name, data_name) {
+	    $("input[name='"+input_name+"']").click(function(){
+	        $('body').attr(data_name, $(this).val());
+	        $.cookie('the_'+input_name, $(this).val());
+	    });
+	}
+	setTheme('site_theme', 'data-theme');
+	setTheme('logo_bg', 'data-logobg');
+	setTheme('header_bg', 'data-headerbg');
+	setTheme('sidebar_bg', 'data-sidebarbg');
+```
+> 由jquery读取设置，可能会受到加载速度的影响
+
 
 #### 特别感谢
 - Bootstrap(去掉了自带的字体图标)
