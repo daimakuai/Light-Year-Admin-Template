@@ -2880,6 +2880,197 @@ dd, dt {
   animation: spinner-border .75s linear infinite;
 }
 
+/* 步骤条 */
+.nav-step {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: baseline;
+	align-items: baseline;
+    padding: 0px;
+	margin-bottom: 1rem;
+}
+.step-dots .nav-step-item {
+	position: relative;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+	-webkit-box-flex: 1;
+	-webkit-box-align: center;
+	align-items: center;
+	flex: 1 1;
+	padding: 0 12px
+}
+.step-dots .nav-step-item:first-child a::before {
+	display: none
+}
+.step-dots .nav-step-item.complete a,
+.step-dots .nav-step-item.complete a::before,
+.step-dots .nav-step-item.active a,
+.step-dots .nav-step-item.active a::before {
+	background-color: #dcfcfa
+}
+.step-dots .nav-step-item.complete a::after,
+.step-dots .nav-step-item.active a::after {
+	background-color: #33cabb;
+	width: 29px;
+	height: 29px;
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+	color: #fff
+}
+.step-dots .nav-step-item.complete a::after {
+	width: 29px;
+	height: 29px;
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+	color: #fff
+}
+.step-dots .nav-step-item.active a::after {
+	width: 13px;
+	height: 13px;
+	margin-top: 8px;
+	-webkit-transform: translateX(8px);
+	transform: translateX(8px);
+	color: transparent
+}
+.step-dots a {
+	display: -webkit-inline-box;
+	display: inline-flex;
+    padding: 0;
+	margin: 10px 0;
+	width: 29px;
+	height: 29px;
+	max-height: 29px;
+	border-radius: 50%;
+	background-color: #f7fafc;
+	-webkit-transition: .5s;
+	transition: .5s;
+	z-index: 1
+}
+.step-dots a::before {
+	content: '';
+	position: absolute;
+	left: calc(-50% + 14.5px);
+	right: calc(50% + 14.5px);
+	height: 10px;
+	margin-top: 9.5px;
+	background-color: #f7fafc;
+	cursor: default;
+	-webkit-transition: .5s;
+	transition: .5s;
+}
+.step-dots a::after {
+	content: "\f12c";
+	font-family: "Material Design Icons";
+	width: 0;
+	height: 0;
+	text-align: center;
+	font-size: 15px;
+	position: absolute;
+	border-radius: 50%;
+	background-color: transparent;
+	color: transparent;
+	-webkit-transform: translate(14.5px, 14.5px);
+	transform: translate(14.5px, 14.5px);
+	-webkit-transition: .5s;
+	transition: .5s;
+	z-index: 1;
+	display: -webkit-inline-box;
+	display: inline-flex;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content: center
+}
+.nav-step-pane.active {
+    display: block!important;
+}
+.nav-step-button {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.nav-step-button button.disabled {
+    opacity: 0;
+}
+
+.nav-step.step-anchor {
+    justify-content: flex-start;
+    border: 0;
+    background: #fcfdfe;
+    border-radius: 0;
+    list-style: none;
+    overflow: hidden;
+}
+.step-anchor > li > a,
+.step-anchor > li > a:hover {
+    color: #bbb;
+    text-decoration: none;
+    padding: 10px 0 10px 45px;
+    position: relative;
+    display: block;
+    border: 0!important;
+    border-radius: 0;
+    outline-style: none;
+    background: #f7fafc;
+}
+.step-anchor > li > a:before,
+.step-anchor > li > a:after {
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+}
+.step-anchor > li > a:after {
+	content: " ";
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid transparent;
+	border-left: 30px solid #f7fafc;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px;
+	left: 100%;
+	z-index: 2
+}
+.step-anchor > li > a:before {
+	content: " ";
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid transparent;
+	border-left: 30px solid rgba(77,82,89,0.075);
+	position: absolute;
+	top: 50%;
+	margin-top: -50px;
+	margin-left: 1px;
+	left: 100%;
+	z-index: 1
+}
+.step-anchor > li:first-child > a {
+    padding-left: 15px;
+}
+.step-anchor > li.active h6,
+.step-anchor > li.complete h6 {
+    color: #fff!important;
+}
+.step-anchor > li.active > a,
+.step-anchor > li.complete > a {
+    border-color: #33cabb!important;
+    color: rgba(255, 255, 255, .8)!important;
+    background: #33cabb!important;
+}
+.step-anchor > li.active > a:after,
+.step-anchor > li.complete > a:after {
+    border-left: 30px solid #33cabb!important;
+}
+
 /** ----------------------------------
  * 响应式处理
  -------------------------------------- */
