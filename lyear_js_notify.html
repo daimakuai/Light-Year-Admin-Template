@@ -291,8 +291,8 @@ lightyear.loading('hide');  // 隐藏</code></pre>
                     <td>提示类型：'info', 'success', 'warning', 'danger'</td>
                   </tr>
                   <tr>
-                    <td>$time</td>
-                    <td>毫秒数</td>
+                    <td>$delay</td>
+                    <td>定义消息提示消失的时间，毫秒数</td>
                   </tr>
                   <tr>
                     <td>$icon</td>
@@ -336,7 +336,7 @@ $('#example-success-notify').on('click', function(){
     // 假设ajax提交操作
     setTimeout(function() {
         lightyear.loading('hide');
-        lightyear.notify('修改成功，页面即将自动跳转~', 'success', 5000);
+        lightyear.notify('修改成功，页面即将自动跳转~', 'success', 3000);
     }, 1e3)
 });
 $('#example-error-notify').on('click', function(){
@@ -344,7 +344,7 @@ $('#example-error-notify').on('click', function(){
     // 假设ajax提交操作
     setTimeout(function() {
         lightyear.loading('hide');
-        lightyear.notify('服务器错误，请稍后再试~', 'danger');
+        lightyear.notify('服务器错误，请稍后再试~', 'danger', 100);
     }, 1e3)
 });
 </script>
