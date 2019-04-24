@@ -2848,6 +2848,7 @@ dd, dt {
 .card .tab-content {
     padding: 10px 24px;
 }
+/* page-tabs */
 .page-tabs.nav-tabs {
     padding: 0px 10px;
 }
@@ -3083,6 +3084,95 @@ dd, dt {
 .step-anchor > li.active > a:after,
 .step-anchor > li.complete > a:after {
     border-left: 30px solid #33cabb!important;
+}
+
+/* 多图上传 */
+.lyear-uploads-pic {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    margin-bottom: 0px;
+}
+.lyear-uploads-pic figure  {
+    position: relative;
+    background: #4d5259;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+.lyear-uploads-pic figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    width: 100%;
+    opacity: 1;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+.lyear-uploads-pic figure:hover img {
+    opacity: 0.5;
+}
+.lyear-uploads-pic figure figcaption,
+.lyear-uploads-pic figure figcaption > a:not(.btn) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.lyear-uploads-pic figure figcaption {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-transform: none;
+    padding: 2em;
+    color: #fff;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: .35s;
+    transition: .35s;
+}
+.lyear-uploads-pic figure figcaption > a {
+    position: static;
+    z-index: auto;
+    text-indent: 0;
+    white-space: nowrap;
+    opacity: 1;
+	margin-left: 2px;
+	margin-right: 2px
+}
+.lyear-uploads-pic figure figcaption > *:first-child {
+    margin-left: 0;
+}
+.lyear-uploads-pic figure:hover figcaption {
+	-webkit-transform: scale(1);
+	transform: scale(1)
+}
+.lyear-uploads-pic .pic-add {
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border: 1px dashed #ebebeb;
+    font-family: "Material Design Icons";
+    font-size: 2.875rem;
+    color: #8b95a5;
+    -webkit-transition: .35s;
+    transition: .35s;
+}
+.lyear-uploads-pic .pic-add:before {
+    content: "\f415";
+}
+.lyear-uploads-pic .pic-add:hover {
+    border-color: #33cabb;
+    color: #33cabb;
 }
 
 /** ----------------------------------
