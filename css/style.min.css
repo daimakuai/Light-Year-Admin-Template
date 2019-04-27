@@ -146,10 +146,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     border-color: #eceeef;
 }
 .table-striped tbody tr:nth-of-type(odd) {
-    background-color: #fcfdfe;
+    background-color: #fafafa;
 }
 .table-hover > tbody > tr:hover {
-  background-color: #f9fafb;
+  background-color: #F1FBFB;
 }
 .table-vcenter > thead > tr > th,
 .table-vcenter > thead > tr > td,
