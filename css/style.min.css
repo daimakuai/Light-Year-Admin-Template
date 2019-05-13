@@ -141,7 +141,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .table>tfoot>tr>th,
 .table>thead>tr>td,
 .table>thead>tr>th {
-    padding: .75em;
+    /*padding: .75em;*/
+    padding: 10px;
 	line-height: 1.5;
     border-color: #eceeef;
 }
@@ -568,6 +569,8 @@ button.list-group-item:hover {
     padding-left: 30px;
     font-weight: 400;
     min-height: 18px;
+    height: auto!important;
+    line-height: 18px!important;
 }
 input[type=checkbox],
 input[type=radio] {
@@ -589,7 +592,7 @@ input[type=radio] {
     height: 18px;
     width: 18px;
     left: 0;
-    top: 1px;
+    top: 0px;
     border: 2px solid #ebebeb;;
     -webkit-transition: all .1s;
     -o-transition: all .1s;
@@ -603,7 +606,7 @@ input[type=radio] {
     width: 5px;
     height: 10px;
     left: 7px;
-    top: 4px;
+    top: 3px;
     border: solid #4d5259;
     border-width: 0 2px 2px 0;
     -webkit-transform: rotate(45deg);
@@ -733,7 +736,7 @@ input[type=radio] {
     border: 0;
     height: 6px;
     left: 6px;
-    top: 7px;
+    top: 6px;
     width: 6px;
     background: #4d5259;
     -webkit-border-radius: 100%;
